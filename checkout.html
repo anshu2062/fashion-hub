@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout - Fashion Hub</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZKJ0PEXG9T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZKJ0PEXG9T');
+</script>
+
+<style>
+.checkout-box{
+    width:50%;
+    margin:40px auto;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#00bfff;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<div class="logo">Fashion Hub</div>
+
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="products.html">Products</a></li>
+<li><a href="cart.html">Cart 🛒</a></li>
+</ul>
+</nav>
+</header>
+
+<div class="checkout-box">
+
+<h2>Checkout</h2>
+
+<input type="text" id="name" placeholder="Full Name" required>
+<input type="text" id="address" placeholder="Address" required>
+<input type="text" id="phone" placeholder="Phone Number" required>
+
+<h3 id="total"></h3>
+
+<button onclick="placeOrder()">Place Order</button>
+
+</div>
+
+<script src="js/script.js"></script>
+
+<script>
+function loadTotal(){
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let total = 0;
+
+    cart.forEach(item=>{
+        total += item.price;
+    });
+
+    document.getElementById("total").innerHTML = "Total: Rs. " + total;
+}
+
+function placeOrder(){
+    let name = document.getElementById("name").value;
+
+    if(name === ""){
+        alert("Please fill details!");
+        return;
+    }
+
+    localStorage.removeItem("cart");
+
+    alert("Order Placed Successfully!");
+
+    window.location.href = "success.html";
+}
+
+loadTotal();
+</script>
+
+</body>
+</html>

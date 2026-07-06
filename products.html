@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products - Fashion Hub</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZKJ0PEXG9T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZKJ0PEXG9T');
+</script>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">Fashion Hub</div>
+
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="products.html">Products</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="cart.html">Cart 🛒</a></li>
+</ul>
+</nav>
+
+</header>
+
+<section class="featured">
+
+<h2>Our Products</h2>
+
+<div class="products">
+
+<div class="card">
+<img src="images/tshirt.jpg" alt="">
+<h3>Men's T-Shirt</h3>
+<p>Rs.999</p>
+<button class="btn" onclick="addToCart('Men T-Shirt',999)">Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="images/jeans.jpg" alt="">
+<h3>Jeans</h3>
+<p>Rs.1899</p>
+<button class="btn" onclick="addToCart('Jeans',1899)">Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="images/hoodie.jpg" alt="">
+<h3>Hoodie</h3>
+<p>Rs.2199</p>
+<button class="btn" onclick="addToCart('Hoodie',2199)">Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="images/shoes.jpg" alt="">
+<h3>Sneakers</h3>
+<p>Rs.2999</p>
+<button class="btn" onclick="addToCart('Sneakers',2999)">Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="images/kurti.jpg" alt="">
+<h3>Women's Kurti</h3>
+<p>Rs.1499</p>
+<button class="btn" onclick="addToCart('Women Kurti',1499)">Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="images/watch.jpg" alt="">
+<h3>Watch</h3>
+<p>Rs.2499</p>
+<button class="btn" onclick="addToCart('Watch',2499)">Add to Cart</button>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+<p>&copy; 2026 Fashion Hub</p>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
